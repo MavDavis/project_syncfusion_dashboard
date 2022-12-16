@@ -5,7 +5,7 @@ import Card from "./components/Card";
 import obj from "./components/obj";
 function App() {
   let cardSmall = obj.map((item) => {
-   return <Card obj={item} />;
+   return <Card key={item.id} obj={item} />;
   });
   return (
     <div className="App">
