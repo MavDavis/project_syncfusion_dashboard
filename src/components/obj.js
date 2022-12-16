@@ -11,7 +11,7 @@ let obj = [{
 
 },{
     Img:require('../assets/card1.png'),
-    rating:5.0,
+    rating:3.3,
     reviewCount:'(6)',
     country:('online'),
     title:'Life lessons with Kartie Zeferas',
@@ -20,8 +20,8 @@ let obj = [{
     openSpots:1
 
 },{
-    Img:require('../assets/card1.png'),
-    rating:5.0,
+    Img:require('../assets/card2.png'),
+    rating:'3.0',
     reviewCount:'(6)',
     country:('USA'),
     title:'Life lessons with Kartie Zeferas',
@@ -30,8 +30,8 @@ let obj = [{
     openSpots:1
 
 },{
-    Img:require('../assets/card1.png'),
-    rating:5.0,
+    Img:require('../assets/card3.png'),
+    rating:'5.0',
     reviewCount:'(6)',
     country:('online'),
     title:'Life lessons with Kartie Zeferas',

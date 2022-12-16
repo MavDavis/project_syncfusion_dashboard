@@ -15,7 +15,7 @@ export default function Card(props) {
     <div className="card">
       <div className="card-img">
         <img src={props.obj.Img} alt="" />
-        {badgeText.length && <div className="sold">{badgeText}</div>}
+        {badgeText.length && <div className="sold" style={{display:badgeText.length ? 'block' : 'none'}}>{badgeText}</div>}
       </div>
       <p className="p">
         <span className="icon">
