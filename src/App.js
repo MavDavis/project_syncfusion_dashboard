@@ -1,15 +1,28 @@
 import "./App.css";
-import Interest from "./components/Interest";
-import Info from "./components/Info";
-import Footer from "./components/Footer";
-function App({title,paragraph}) {
+import Navbar from "./components/Navbar";
+import Landing from "./components/Landing";
+import Card from "./components/Card";
+import obj from "./components/obj";
+function App() {
+  let cardSmall = obj.map((item) => {
+   return <Card obj={item} />;
+  });
   return (
     <div className="App">
-      <Info />
-      <Interest title={'About'} paragraph={'Meticulous web developer with over 3 years of frontend experience and passion for responsive and aesthetic design. Worked on over 12  large scale projects both independently and with teams of  5 - 30.'}/>
+      <Navbar />
+      <Landing />
+      <div className="text">
+        <h1>Online Experiences</h1>
+        <p>
+          Join unique interactive activities led by one-of-a-kind hosts—all
+          without leaving home.
+        </p>
+      </div>
+      <div className="cards">
 
-      <Interest title={'Interest'} paragraph={'Blockchain learning, Seo, data structures, Artificial Intelligence and more as I grow.'}/>
-      <Footer />
+      {cardSmall}
+      </div>
+
     </div>
   );
 }
