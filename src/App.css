@@ -79,10 +79,26 @@ text-align: left;
 .card .icon{
   color: #FE395C;
 }
-.card img {
+.card-img {
   height: 235px;
   width: 176px;
   border-radius: 9px;
+  position: relative;
+}
+.card-img img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.card-img .sold{
+  position: absolute;
+  top: 1rem;
+  left: 10px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 4px;
+  font-size: 10px;
+  text-align: center;
 }
 .card .p1{
   font-weight: 600;
