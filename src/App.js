@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
+import {useStateContext} from './Contexts/ContextProvider'
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./Components";
 import {
   Ecommerce,
@@ -23,11 +23,11 @@ import {
   Editor,
 } from "./Pages";
 import { FiSettings } from "react-icons/fi";
-const activeMenu = true;
 const App = () => {
+const {activeMenu} = useStateContext();
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter>  
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
             <TooltipComponent content="Settings" position="Top">
