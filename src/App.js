@@ -55,7 +55,6 @@ const {activeMenu} = useStateContext();
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
-            <div>
               {/* {themeSettings && (<ThemeSettings />)} */}
 
               <Routes>
@@ -87,6 +86,8 @@ const {activeMenu} = useStateContext();
             </div>
             <Footer />
           </div>
+          <div>
+
         </div>
       </BrowserRouter>
     </div>
