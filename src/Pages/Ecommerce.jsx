@@ -2,7 +2,7 @@ import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 import { Stacked, Pie, Button, SparkLine } from "../Components";
-import { earningData,  ecomPieChartDat, SparklineAreaData } from "../data/dummy";
+import { earningData, ecomPieChartDat, SparklineAreaData } from "../data/dummy";
 import { useStateContext } from "../Contexts/ContextProvider";
 const Ecommerce = () => {
   return (
@@ -66,37 +66,37 @@ const Ecommerce = () => {
           </div>
           <div className="mt-10 flex gap-10 flex-wrap justify-center">
             <div className="border-color m-4 pr-10 border-r-1">
-            <div>
+              <div>
                 <p>
                   <span className="text-3xl font-semibold">$56,666</span>
                   <span className="p-1.5 hover:drop-shadow-xl bg-green-400 ml-3 text-xs cursor-pointer rounded-full text-white">
                     23%
                   </span>
                 </p>
-                <p className="text-gray-400 mt-1">Budget 
-                </p>
-              </div> 
+                <p className="text-gray-400 mt-1">Budget</p>
+              </div>
               <div>
                 <p>
                   <span className="text-3xl font-semibold">$48,666</span>
-              
                 </p>
-                <p className="text-gray-400 mt-1">Expense 
-                </p>
+                <p className="text-gray-400 mt-1">Expense</p>
               </div>
               <div className="mt-5 ">
                 <SparkLine
-                currentColor ='blue'
-                id='line-sparkline'
-                type ='Line'
-                width='250px'
-                height='80px'
-                data={SparklineAreaData}
-                color='blue'
+                  currentColor={"blue"}
+                  id="line-sparkLine"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color={"blue"}
                 />
-              
+              </div>
+              <div className="mt-10 ">
+                <Button color={'white'} bgColor='blue' text={'Download Report'} borderRadius='10px' />
               </div>
             </div>
+          <Stacked width='320px' height='360px'/>
           </div>
         </div>
       </div>
