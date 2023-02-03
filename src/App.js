@@ -24,9 +24,9 @@ import {
 } from "./Pages";
 import { FiSettings } from "react-icons/fi";
 const App = () => {
-const {activeMenu} = useStateContext();
+const {activeMenu, themeSettings, setThemeSettings, currentColor, currentMode} = useStateContext();
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>  
         <div className="flex relative dark:bg-main-dark-bg">
           <div className="fixed right-4 bottom-4" style={{ zIndex: "1000" }}>
@@ -34,7 +34,10 @@ const {activeMenu} = useStateContext();
               <button
                 type="button"
                 className="text-3xl hover:drop-shadow-xl hover:bg-light-gray p-3 text-white rounded-full"
-                style={{ background: "blue" }}
+                style={{ background: currentColor }}
+                onClick={()=>{
+                  setThemeSettings(true)
+                }}
               >
                 <FiSettings />
               </button>
@@ -48,14 +51,16 @@ const {activeMenu} = useStateContext();
             <div className="w-0 dark:bg-secondary-dark-bg"><Sidebar/></div>
           )}
           <div
-            className={`dark:bg-main-bg min-h-screen bg-main-bg w-full ${
+            className={`dark:bg-main-dark-bg min-h-screen bg-main-bg w-full ${
               activeMenu ? "md:ml-72" : "flex-2"
             }`}
           >
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
               <Navbar />
             </div>
-              {/* {themeSettings && (<ThemeSettings />)} */}
+              {themeSettings && (
+              <ThemeSettings />)
+              }
 
               <Routes>
                 {/* dashboard  */}
